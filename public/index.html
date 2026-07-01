@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saffron & Smoke — Modern Restaurant</title>
+  <meta name="description" content="Saffron & Smoke - a modern restaurant serving starters, main course, pizza, burgers, pasta, drinks and desserts." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ===== Loading Animation ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Saffron &amp; Smoke</p>
+  </div>
+
+  <!-- ===== Header / Sticky Navbar ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">Saffron<span class="accent">&amp;</span>Smoke</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <span class="hero-badge reveal" data-anim="fade-down">Fine Dining · Est. 2014</span>
+      <h1 class="hero-title reveal" data-anim="fade-up">Welcome to Our Restaurant</h1>
+      <p class="hero-text reveal" data-anim="fade-up" data-delay="120">
+        Where bold flavors meet warm hospitality. Freshly crafted dishes, smoky grills,
+        and unforgettable moments served on every plate.
+      </p>
+      <div class="hero-actions reveal" data-anim="fade-up" data-delay="240">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="#contact" class="btn btn-ghost">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Special Offers Section ===== -->
+  <section class="offers">
+    <div class="container">
+      <div class="offer-banner reveal" data-anim="zoom-in">
+        <div>
+          <h3>Weekend Feast — Flat 25% Off</h3>
+          <p>Dine in this weekend and enjoy a quarter off your total bill. No coupon needed.</p>
+        </div>
+        <a href="#menu" class="btn btn-primary">Grab the Offer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Menu Section ===== -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade-up">
+        <span class="eyebrow">Our Menu</span>
+        <h2 class="section-title">Crafted With Passion</h2>
+        <p class="section-sub">Search your cravings or filter by category — no page reloads, just food.</p>
+      </div>
+
+      <!-- Search -->
+      <div class="search-wrap reveal" data-anim="fade-up">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search food by name..." aria-label="Search food" />
+      </div>
+
+      <!-- Category Filters -->
+      <div class="filters reveal" data-anim="fade-up" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Starters">Starters</button>
+        <button class="filter-btn" data-filter="Main Course">Main Course</button>
+        <button class="filter-btn" data-filter="Pizza">Pizza</button>
+        <button class="filter-btn" data-filter="Burgers">Burgers</button>
+        <button class="filter-btn" data-filter="Pasta">Pasta</button>
+        <button class="filter-btn" data-filter="Drinks">Drinks</button>
+        <button class="filter-btn" data-filter="Desserts">Desserts</button>
+      </div>
+
+      <!-- Cards injected by JavaScript -->
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="no-results" id="noResults" hidden>No dishes found. Try another search.</p>
+    </div>
+  </section>
+
+  <!-- ===== Chef's Recommendation ===== -->
+  <section class="section chef">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade-up">
+        <span class="eyebrow">Chef's Recommendation</span>
+        <h2 class="section-title">Tonight's Highlights</h2>
+      </div>
+      <div class="chef-grid" id="chefGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-img reveal" data-anim="fade-right">
+        <img src="/images/about.png" alt="Our chef plating a gourmet dish in the kitchen" />
+      </div>
+      <div class="about-content reveal" data-anim="fade-left">
+        <span class="eyebrow">About Us</span>
+        <h2 class="section-title">A Decade of Honest, Bold Cooking</h2>
+        <p>
+          Saffron &amp; Smoke began as a small family kitchen with one belief — great food
+          brings people together. Today we serve hundreds of guests daily, never compromising
+          on the ingredients, the craft, or the warmth behind every dish.
+        </p>
+        <div class="about-points">
+          <div class="point"><h4>Our Mission</h4><p>To make every meal feel like a celebration worth remembering.</p></div>
+          <div class="point"><h4>Quality Food</h4><p>Locally sourced, fresh daily produce and zero shortcuts in the kitchen.</p></div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>10+</strong><span>Years</span></div>
+          <div class="stat"><strong>120+</strong><span>Dishes</span></div>
+          <div class="stat"><strong>50k+</strong><span>Happy Guests</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade-up">
+        <span class="eyebrow">Testimonials</span>
+        <h2 class="section-title">What Our Guests Say</h2>
+      </div>
+      <div class="testimonial-grid" id="testimonialGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-head reveal" data-anim="fade-up">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Visit or Reach Out</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal" data-anim="fade-right">
+          <div class="info-item"><h4>Address</h4><p>42 Spice Lane, Andheri West, Mumbai 400053</p></div>
+          <div class="info-item"><h4>Phone</h4><p>+91 98765 43210</p></div>
+          <div class="info-item"><h4>Email</h4><p>hello@saffronandsmoke.com</p></div>
+          <div class="info-item"><h4>Opening Hours</h4><p>Mon – Sun · 11:00 AM – 11:30 PM</p></div>
+        </div>
+        <div class="map-placeholder reveal" data-anim="fade-left" aria-label="Google Map placeholder">
+          <span>Google Map</span>
+          <small>Map embed goes here</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo logo-footer">
+          <span class="logo-mark">S</span>
+          <span class="logo-text">Saffron<span class="accent">&amp;</span>Smoke</span>
+        </a>
+        <p>Bold flavors, warm hospitality, and dishes worth coming back for.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Facebook" class="social">Fb</a>
+          <a href="#" aria-label="Instagram" class="social">Ig</a>
+          <a href="#" aria-label="Twitter" class="social">Tw</a>
+          <a href="#" aria-label="YouTube" class="social">Yt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Saffron &amp; Smoke. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="/script.js"></script>
+</body>
+</html>
